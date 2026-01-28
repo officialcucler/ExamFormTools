@@ -32,6 +32,31 @@
       <p>Resize images, compress PDFs and convert files for all major exams.</p>
     </section>
 
+    <section class="tool-container" id="image-resizer">
+  <h2>Image Resizer</h2>
+
+  <div class="resizer-box">
+    <input type="file" id="uploadImage" accept="image/*" />
+
+    <div class="dimension-controls">
+      <input type="number" id="widthInput" placeholder="Width (px)">
+      <input type="number" id="heightInput" placeholder="Height (px)">
+      <label class="aspect">
+        <input type="checkbox" id="lockAspect" checked>
+        Lock Aspect Ratio
+      </label>
+    </div>
+
+    <button id="resizeBtn">Resize Image</button>
+
+    <div class="preview">
+      <canvas id="canvas"></canvas>
+    </div>
+
+    <a id="downloadBtn" download="resized-image.png">Download Image</a>
+  </div>
+    </section>
+
 
     <section class="tools-section">
   <div class="tools-grid">
