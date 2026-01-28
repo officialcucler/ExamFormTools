@@ -19,22 +19,30 @@ imageInput.addEventListener('change', (e) => {
 resizeBtn.addEventListener('click', () => {
   const width = parseInt(document.getElementById('widthInput').value);
   const height = parseInt(document.getElementById('heightInput').value);
+  const targetKB = parseInt(document.getElementById('sizeInput').value);
 
   if (!width || !height || !originalImage.src) {
-    alert('Please select image and enter valid width & height');
+    alert('Please select image and enter width & height');
     return;
   }
 
   canvas.width = width;
   canvas.height = height;
-
   const ctx = canvas.getContext('2d');
-  ctx.clearRect(0, 0, width, height);
   ctx.drawImage(originalImage, 0, 0, width, height);
 
   canvas.style.display = 'block';
 
-  const dataURL = canvas.toDataURL('image/jpeg', 0.95);
+  let quality = 0.95;
+  let dataURL = canvas.toDataURL('image/jpeg', quality);
+
+  if (targetKB) {
+    while (dataURL.length / 1024 > targetKB && quality > 0.1) {
+      quality -= 0.05;
+      dataURL = canvas.toDataURL('image/jpeg', quality);
+    }
+  }
+
   downloadBtn.href = dataURL;
   downloadBtn.download = 'exam-photo.jpg';
   downloadBtn.style.display = 'inline-block';
