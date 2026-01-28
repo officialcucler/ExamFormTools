@@ -216,3 +216,70 @@ body{
     display:flex;
   }
 }
+
+.tool-container {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.tool-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.resizer-box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.dimension-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.dimension-controls input {
+  flex: 1;
+  padding: 10px;
+}
+
+.aspect {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+#resizeBtn {
+  width: 100%;
+  padding: 12px;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.preview {
+  margin-top: 20px;
+  text-align: center;
+}
+
+canvas {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+#downloadBtn {
+  display: none;
+  margin-top: 15px;
+  text-align: center;
+  background: #16a34a;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  text-decoration: none;
+}
