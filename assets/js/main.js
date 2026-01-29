@@ -68,10 +68,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }, observerOptions);
 
     document.querySelectorAll('.tools-section, .stats-section, .categories-section, .features-section').forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(el);
+        const isMobile = window.innerWidth <= 768;
+        if (el.classList.contains('categories-section') && isMobile) {
+            // On mobile, keep categories visible but still animate transform
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'transform 0.6s ease';
+            observer.observe(el);
+        } else {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        }
     });
 
     // Mobile nav toggle (right-drawer)
