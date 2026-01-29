@@ -64,18 +64,12 @@
                             <div class="select-field">
                                 <label for="exam-select">Choose Exam Type</label>
                                 <select id="exam-select">
-                                    <option value="custom">Custom</option>
+                                    <option value="custom" selected>Custom</option>
                                     <option value="upsc">UPSC</option>
                                     <option value="ssc">SSC</option>
                                     <option value="banking">Banking Exams</option>
                                     <option value="railway">Railway Exams</option>
                                 </select>
-                            </div>
-                            <div class="custom-options" id="custom-options" style="display: none;">
-                                <div class="input-field">
-                                    <label for="max-size-input">Max File Size (KB)</label>
-                                    <input type="number" id="max-size-input" min="1" max="5000" placeholder="Max size in KB">
-                                </div>
                             </div>
                         </div>
 
@@ -89,6 +83,12 @@
                                 <div class="input-field">
                                     <label for="height-input">Height (px)</label>
                                     <input type="number" id="height-input" min="1" max="5000" placeholder="Height">
+                                </div>
+                            </div>
+                            <div class="custom-options" id="custom-options" style="display: none;">
+                                <div class="input-field">
+                                    <label for="max-size-input">Max File Size (KB)</label>
+                                    <input type="number" id="max-size-input" min="1" max="5000" placeholder="Max size in KB">
                                 </div>
                             </div>
                             <button class="btn-secondary" id="auto-resize-btn">Auto Resize</button>
@@ -105,6 +105,7 @@
                         <div class="action-buttons">
                             <button class="btn-primary" id="resize-btn">Resize & Compress</button>
                             <button class="btn-secondary" id="reset-btn">Reset</button>
+                            <button class="btn-secondary" id="new-upload-btn">New Upload</button>
                         </div>
                     </div>
 

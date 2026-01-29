@@ -79,11 +79,19 @@ document.addEventListener('DOMContentLoaded', function() {
     // Reset button
     resetBtn.addEventListener('click', resetTool);
 
+    // New Upload button
+    const newUploadBtn = document.getElementById('new-upload-btn');
+    newUploadBtn.addEventListener('click', () => {
+        resetTool();
+        imageInput.click();
+    });
+
     // Download button
     downloadBtn.addEventListener('click', downloadImage);
 
     // Exam select
     examSelect.addEventListener('change', setExamDimensions);
+    setExamDimensions(); // Initialize on load
 
     function handleFileSelect(e) {
         const file = e.target.files[0];
@@ -163,24 +171,17 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function resetTool() {
-        originalFile = null;
         resizedBlob = null;
-        imageInput.value = '';
         widthInput.value = '';
-        heightInput.value = '';
         heightInput.value = '';
         qualitySlider.value = 80;
         qualityValue.textContent = '80';
-        originalImage.src = '';
+        examSelect.value = 'custom';
+        setExamDimensions(); // Reset exam preferences
         resizedImage.src = '';
         resizedImage.style.display = 'none';
-        originalSize.textContent = 'Size: --';
-        originalDimensions.textContent = 'Dimensions: --';
         resizedSize.textContent = 'Size: --';
         resizedDimensions.textContent = 'Dimensions: --';
-        controlsPanel.style.display = 'none';
-        previewPanel.style.display = 'none';
-        uploadArea.style.display = 'block';
         downloadBtn.style.display = 'none';
     }
 
@@ -208,6 +209,8 @@ document.addEventListener('DOMContentLoaded', function() {
             heightInput.value = '';
             qualitySlider.value = 80;
             qualityValue.textContent = '80';
+            autoResizeBtn.disabled = false;
+            autoResizeBtn.style.opacity = '1';
         } else {
             customOptions.style.display = 'none';
             if (requirements) {
@@ -216,6 +219,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 qualitySlider.value = requirements.quality;
                 qualityValue.textContent = requirements.quality;
             }
+            autoResizeBtn.disabled = true;
+            autoResizeBtn.style.opacity = '0.5';
         }
     }
 

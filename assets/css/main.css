@@ -415,9 +415,9 @@ html {
 }
 
 .btn-secondary {
-    background: transparent;
-    color: var(--btn-contrast);
-    border: 2px solid rgba(255,255,255,0.9);
+    background: black;
+    color: white;
+    border: 2px solid black;
 }
 
 .btn-secondary:hover {
