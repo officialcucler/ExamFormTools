@@ -18,7 +18,7 @@
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
-    padding: 14px 20px;
+    padding: 14px 0;
 }
 .site-header .container { max-width: var(--content-max); margin: 0 auto; }
 .logo {
