@@ -76,6 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Mobile nav toggle (right-drawer)
     const navToggle = document.getElementById('nav-toggle');
+    const navCancel = document.getElementById('nav-cancel');
     const siteNav = document.getElementById('site-nav');
 
     let focusTrapCleanup = null;
@@ -133,6 +134,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (focusTrapCleanup) { focusTrapCleanup(); focusTrapCleanup = null; }
                 if (previouslyFocused) previouslyFocused.focus();
             }
+        });
+    }
+
+    // Cancel button for mobile nav
+    if (navCancel) {
+        navCancel.addEventListener('click', () => {
+            closeMobileMenu();
         });
     }
 

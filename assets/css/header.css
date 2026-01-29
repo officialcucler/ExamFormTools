@@ -80,6 +80,20 @@
 }
 .nav-toggle span { display: block; height: 3px; background: var(--text); border-radius: 3px; }
 
+.nav-cancel {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    font-size: 32px;
+    font-weight: bold;
+    color: #1f2937;
+    cursor: pointer;
+    z-index: 1003;
+}
+
 /* Skip link for accessibility (header related) */
 .skip-link {
     position: absolute;
@@ -162,6 +176,8 @@
     .nav-toggle.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
     .nav-toggle.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
     .nav-toggle.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+    .nav-cancel { display: block; }
 }
 /* Header-specific styles (placeholder) */
 .site-header { }
