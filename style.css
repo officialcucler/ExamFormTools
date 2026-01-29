@@ -162,8 +162,16 @@ body{
 
 /* Logo */
 .logo{
-  font-size:22px;
-  font-weight:800;
+  display: flex;
+  align-items: center;
+  height: 50px;
+}
+
+.logo img {
+  max-width: 100%;
+  height: auto;
+  max-height: 50px;
+  width: auto;
 }
 
 /* Menu Toggle */
