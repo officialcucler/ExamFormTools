@@ -372,3 +372,69 @@
     width: 20px;
     height: 20px;
 }
+
+/* Custom Select Dropdown Styles */
+.select-field {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.select-field label {
+    display: block;
+    font-size: 0.875rem;
+    color: var(--text-strong);
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.select-field select {
+    width: 100%;
+    padding: 0.75rem 2.5rem 0.75rem 1rem;
+    border: 2px solid var(--muted-3);
+    border-radius: 12px;
+    background: white;
+    color: var(--text-strong);
+    font-size: 1rem;
+    font-family: inherit;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.select-field select:focus {
+    outline: none;
+    border-color: var(--brand-1);
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.select-field select:hover {
+    border-color: var(--brand-1);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+}
+
+.select-field::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid var(--muted-2);
+    pointer-events: none;
+    transition: border-color 0.3s ease;
+}
+
+.select-field select:hover + ::after,
+.select-field select:focus + ::after {
+    border-top-color: var(--brand-1);
+}
+
+.select-field select:focus + ::after {
+    border-top-color: var(--brand-1);
+}
