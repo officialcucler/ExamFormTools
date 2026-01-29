@@ -113,9 +113,11 @@
         border-left: 1px solid rgba(2,6,23,0.06);
         transition: transform 320ms cubic-bezier(.2,.9,.2,1);
         z-index: 1001;
+        overflow-y: auto;
+        visibility: hidden;
     }
     .site-nav a { padding: 12px 8px; opacity: 0; transform: translateX(12px); }
-    .site-nav.open { transform: translateX(0%); }
+    .site-nav.open { transform: translateX(0%); visibility: visible; }
     .site-nav.open a { opacity: 1; transform: translateX(0); }
 
     /* staggered reveal for nav items */
