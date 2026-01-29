@@ -15,7 +15,21 @@ document.addEventListener('DOMContentLoaded', () => {
             const target = document.querySelector(href);
             if (target) {
                 e.preventDefault();
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+                const isMobile = window.innerWidth <= 768;
+                if (isMobile && typeof window.closeMobileMenu === 'function') {
+                    window.closeMobileMenu();
+                    // Delay scroll to allow menu to close
+                    setTimeout(() => {
+                        const header = document.querySelector('.site-header');
+                        const headerHeight = header ? header.offsetHeight : 0;
+                        window.scrollTo({ top: target.offsetTop - headerHeight, behavior: 'smooth' });
+                    }, 350);
+                } else {
+                    const header = document.querySelector('.site-header');
+                    const headerHeight = header ? header.offsetHeight : 0;
+                    window.scrollTo({ top: target.offsetTop - headerHeight, behavior: 'smooth' });
+                }
 
                 if (history && history.pushState) {
                     history.pushState(null, '', href);
@@ -28,13 +42,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     target.focus({ preventScroll: true });
                     target.removeAttribute('tabindex');
                 } catch (err) {}
-
-                const mobileNav = document.getElementById('site-nav');
-                const toggleBtn = document.getElementById('nav-toggle');
-                if (mobileNav && mobileNav.classList.contains('open')) {
-                    mobileNav.classList.remove('open');
-                    if (toggleBtn) toggleBtn.setAttribute('aria-expanded', 'false');
-                }
             }
         });
     });
@@ -74,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let focusTrapCleanup = null;
     let previouslyFocused = null;
 
-    const closeMobileMenu = () => {
+    window.closeMobileMenu = () => {
         if (!siteNav) return;
         if (siteNav.classList.contains('open')) siteNav.classList.remove('open');
         const toggle = document.getElementById('nav-toggle');
