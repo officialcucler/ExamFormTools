@@ -249,6 +249,64 @@ document.addEventListener('DOMContentLoaded', () => {
         showCard(0);
     })();
 
+    // Share Button
+    (() => {
+        const shareBtn = document.getElementById('share-btn');
+        if (!shareBtn) return;
+
+        const toggleVisibility = () => {
+            if (window.pageYOffset > 100) {
+                shareBtn.classList.add('show');
+            } else {
+                shareBtn.classList.remove('show');
+            }
+        };
+
+        const sharePage = async () => {
+            const url = window.location.href;
+            const title = document.title;
+            const text = 'Check out ExamFormTools - Your Exam Application, Simplified!';
+
+            if (navigator.share) {
+                try {
+                    await navigator.share({
+                        title: title,
+                        text: text,
+                        url: url
+                    });
+                } catch (err) {
+                    // User cancelled share or error occurred
+                    console.log('Share cancelled or failed');
+                }
+            } else {
+                // Fallback: copy URL to clipboard
+                if (navigator.clipboard) {
+                    try {
+                        await navigator.clipboard.writeText(url);
+                        alert('Link copied to clipboard!');
+                    } catch (err) {
+                        // Fallback for older browsers
+                        const textArea = document.createElement('textarea');
+                        textArea.value = url;
+                        document.body.appendChild(textArea);
+                        textArea.select();
+                        document.execCommand('copy');
+                        document.body.removeChild(textArea);
+                        alert('Link copied to clipboard!');
+                    }
+                } else {
+                    alert('Share not supported on this browser. URL: ' + url);
+                }
+            }
+        };
+
+        window.addEventListener('scroll', toggleVisibility);
+        shareBtn.addEventListener('click', sharePage);
+
+        // Initial check
+        toggleVisibility();
+    })();
+
     // Move to Top Button
     (() => {
         const moveToTopBtn = document.getElementById('move-to-top-btn');
