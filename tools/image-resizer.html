@@ -1,76 +1,18 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Image Resizer – ExamFormTools</title>
-  <link rel="stylesheet" href="../css/style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Image Resizer - ExamFormTools</title>
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <script defer src="/assets/js/main.js"></script>
+  <script defer src="/assets/js/image-resizer.js"></script>
 </head>
 <body>
-
-  <!-- Header (same as index) -->
-  <header class="site-header">
-    <div class="container header-row">
-      <div class="logo"><img src="../Photos/Logo_New.png" alt="ExamFormTools Logo" /></div>
-
-      <div class="menu-toggle" id="menuToggle">☰</div>
-
-      <nav class="nav" id="navMenu">
-        <a href="../index.html">Home</a>
-        <a href="./image-resizer.html" class="active">Tools</a>
-        <a href="../pages/about.html">About</a>
-      </nav>
-    </div>
-  </header>
-
+  <!-- Simple tool placeholder -->
   <main class="container">
-    <section class="hero">
-      <h1>Exam Image Resizer</h1>
-      <p>Resize your photo to exact width & height as required by exam forms.</p>
-    </section>
-
-    <section class="tool-card" style="max-width:600px;margin:auto">
-      <label><strong>Select Image</strong></label>
-      <input type="file" id="imageInput" accept="image/*" />
-
-      <div style="display:flex;gap:12px;margin-top:16px">
-        <div style="flex:1">
-          <label>Width (px)</label>
-          <input type="number" id="widthInput" placeholder="eg: 300" />
-        </div>
-        <div style="flex:1">
-          <label>Height (px)</label>
-          <input type="number" id="heightInput" placeholder="eg: 400" />
-        </div>
-      </div>
-
-      <div style="margin-top:16px">
-  <label>Target Size (KB)</label>
-  <input type="number" id="sizeInput" placeholder="eg: 50" />
-  <small style="display:block;margin-top:6px;color:#666">
-    Leave empty if no size limit required
-  </small>
-      </div>
-
-      <button id="resizeBtn" style="margin-top:20px" class="cta">
-        Resize Image →
-      </button>
-
-      <canvas id="canvas" style="display:none;margin-top:20px"></canvas>
-
-      <a id="downloadBtn" style="display:none;margin-top:16px" class="cta">
-        Download Resized Image
-      </a>
-    </section>
+    <h1>Image Resizer</h1>
+    <p>Tool UI will be implemented here.</p>
   </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <p>© 2026 ExamFormTools.in</p>
-    </div>
-  </footer>
-
-  <script src="../js/main.js"></script>
-  <script src="../js/image-resizer.js"></script>
 </body>
 </html>

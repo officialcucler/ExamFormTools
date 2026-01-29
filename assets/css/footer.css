@@ -1,0 +1,16 @@
+/* Minimal footer styles (keeps footer separated for future customization) */
+.site-footer {
+    padding: 28px 0;
+    background: white;
+    border-top: 1px solid rgba(15, 23, 42, 0.04);
+    color: var(--muted);
+    text-align: center;
+}
+
+.site-footer p {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* Footer-specific styles (placeholder) */
+.site-footer {}

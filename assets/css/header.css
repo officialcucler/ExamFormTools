@@ -1,0 +1,147 @@
+/* Header and navigation styles extracted from main.css */
+#site-header {
+    width: 100%;
+    display: contents;
+}
+
+.site-header {
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(6px);
+    position: sticky;
+    top: 0;
+    z-index: 60;
+    border-bottom: 1px solid rgba(15,23,42,0.04);
+    width: 100%;
+}
+.site-header .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 14px 20px;
+}
+.site-header .container { max-width: var(--content-max); margin: 0 auto; }
+.logo {
+    font-weight: 700;
+    color: var(--brand-1);
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.logo-exam {
+    color: var(--brand-1);
+}
+
+.logo-tools {
+    color: #1f2937;
+}
+.site-nav {
+    display: flex;
+    gap: 1.25rem;
+}
+.site-nav a {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 600;
+}
+.site-nav a { transition: color 160ms ease, opacity 160ms ease; }
+.site-nav a.active { color: var(--brand-2); }
+.site-nav a.active::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 28px;
+    background: var(--brand-2);
+    margin: 6px auto 0;
+    border-radius: 3px;
+}
+.nav-actions { display: flex; align-items: center; gap: 0.75rem; }
+.nav-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    width: 40px;
+    height: 34px;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+    padding: 4px;
+}
+.nav-toggle span { display: block; height: 3px; background: var(--text); border-radius: 3px; }
+
+/* Skip link for accessibility (header related) */
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+.skip-link:focus {
+    position: fixed;
+    left: 12px;
+    top: 12px;
+    background: white;
+    color: var(--text);
+    padding: 8px 12px;
+    border-radius: 6px;
+    width: auto;
+    height: auto;
+    box-shadow: 0 6px 20px rgba(2,6,23,0.2);
+    z-index: 80;
+}
+
+/* Mobile nav behavior */
+@media (max-width: 768px) {
+    .nav-toggle { display: inline-flex; }
+    .site-header .header-inner { padding: 12px 8px; }
+
+    .site-nav {
+        display: flex;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: min(92vw, 360px);
+        transform: translateX(100%);
+        background: rgba(255,255,255,0.98);
+        flex-direction: column;
+        gap: 0;
+        padding: 72px 18px 18px;
+        box-shadow: -12px 0 40px rgba(2,6,23,0.12);
+        border-left: 1px solid rgba(2,6,23,0.06);
+        transition: transform 320ms cubic-bezier(.2,.9,.2,1);
+        z-index: 1001;
+    }
+    .site-nav a { padding: 12px 8px; opacity: 0; transform: translateX(12px); }
+    .site-nav.open { transform: translateX(0%); }
+    .site-nav.open a { opacity: 1; transform: translateX(0); }
+
+    /* staggered reveal for nav items */
+    .site-nav.open a:nth-child(1) { transition: transform 260ms ease, opacity 260ms ease; transition-delay: 60ms; }
+    .site-nav.open a:nth-child(2) { transition: transform 260ms ease, opacity 260ms ease; transition-delay: 110ms; }
+    .site-nav.open a:nth-child(3) { transition: transform 260ms ease, opacity 260ms ease; transition-delay: 160ms; }
+    .site-nav.open a:nth-child(4) { transition: transform 260ms ease, opacity 260ms ease; transition-delay: 210ms; }
+    .site-nav.open a:nth-child(5) { transition: transform 260ms ease, opacity 260ms ease; transition-delay: 260ms; }
+    .site-nav.open a:nth-child(6) { transition: transform 260ms ease, opacity 260ms ease; transition-delay: 310ms; }
+
+    /* overlay when menu open */
+    .nav-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.55);
+        z-index: 1000;
+        opacity: 0;
+        transition: opacity 220ms ease;
+        pointer-events: none;
+    }
+    .nav-overlay.visible { opacity: 1; pointer-events: auto; }
+
+    /* animated toggle to X when open */
+    .nav-toggle.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .nav-toggle.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .nav-toggle.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+}
+/* Header-specific styles (placeholder) */
+.site-header { }
