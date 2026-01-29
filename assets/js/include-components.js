@@ -15,7 +15,8 @@
 
   await Promise.all([
     load('#site-header', 'components/header.html'),
-    load('#site-footer', 'components/footer.html')
+    load('#site-footer', 'components/footer.html'),
+    load('#move-to-top', 'components/move-to-top.html')
   ]);
 
   window.__componentsLoaded = true;

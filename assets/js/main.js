@@ -248,5 +248,29 @@ document.addEventListener('DOMContentLoaded', () => {
         
         showCard(0);
     })();
+
+    // Move to Top Button
+    (() => {
+        const moveToTopBtn = document.getElementById('move-to-top-btn');
+        if (!moveToTopBtn) return;
+
+        const toggleVisibility = () => {
+            if (window.pageYOffset > 100) {
+                moveToTopBtn.classList.add('show');
+            } else {
+                moveToTopBtn.classList.remove('show');
+            }
+        };
+
+        const scrollToTop = () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+
+        window.addEventListener('scroll', toggleVisibility);
+        moveToTopBtn.addEventListener('click', scrollToTop);
+
+        // Initial check
+        toggleVisibility();
+    })();
     });
 });
