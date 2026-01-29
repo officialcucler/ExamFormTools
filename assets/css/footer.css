@@ -8,8 +8,26 @@
 }
 
 .site-footer p {
-    margin: 0;
+    margin: 0 0 10px 0;
     font-size: 0.95rem;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.footer-nav a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+    color: var(--brand-1);
 }
 
 /* Footer-specific styles (placeholder) */
