@@ -376,6 +376,7 @@
 /* Custom Select Dropdown Styles */
 .select-field {
     position: relative;
+    height: 3rem;
     margin-bottom: 1rem;
 }
 
@@ -389,7 +390,9 @@
 
 .select-field select {
     width: 100%;
-    padding: 0.75rem 2.5rem 0.75rem 1rem;
+    height: 3rem;
+    line-height: 3rem;
+    padding: 0 2.5rem 0 1rem;
     border: 2px solid var(--muted-3);
     border-radius: 12px;
     background: white;
@@ -400,8 +403,10 @@
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
+    background-image: none;
+    box-sizing: border-box;
     transition: all 0.3s ease;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .select-field select:focus {
@@ -415,26 +420,4 @@
     box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
 }
 
-.select-field::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    right: 1rem;
-    transform: translateY(-50%);
-    width: 0;
-    height: 0;
-    border-left: 6px solid transparent;
-    border-right: 6px solid transparent;
-    border-top: 6px solid var(--muted-2);
-    pointer-events: none;
-    transition: border-color 0.3s ease;
-}
 
-.select-field select:hover + ::after,
-.select-field select:focus + ::after {
-    border-top-color: var(--brand-1);
-}
-
-.select-field select:focus + ::after {
-    border-top-color: var(--brand-1);
-}
