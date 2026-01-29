@@ -444,7 +444,7 @@ section h2 {
 }
 
 @media (max-width: 768px) {
-    .container { padding: 0; }
+    .container { padding: 0 20px; }
 
     .hero { padding: 56px 0; }
     .hero-grid { grid-template-columns: 1fr; gap: 1.5rem; }
