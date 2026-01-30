@@ -434,6 +434,19 @@ html {
     background: #f8fafc;
     color: var(--text);
     text-align: center;
+    position: relative;
+}
+
+.testimonial-section::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M0,60 Q200,90 400,30 T700,80 1000,40 T1200,60 V0 H0 Z" fill="%23ffffff"/></path></svg>') no-repeat;
+    background-size: cover;
+    z-index: 1;
 }
 
 .testimonials-carousel {
@@ -655,9 +668,37 @@ html {
 /* CTA */
 .cta-section {
     padding: 100px 0;
-    background: rgba(30, 41, 59, 0.75);
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 100" preserveAspectRatio="none"><path d="M0,100 Q200,50 400,40 T600,30 800,20 1000,10 1200,0 V100 H0 Z" fill="%234a90e2" opacity="0.4"/><path d="M0,100 Q250,45 500,35 T750,25 1000,15 1200,5 V100 H0 Z" fill="%235ba0f2" opacity="0.3"/><path d="M0,100 Q300,40 600,30 T900,20 1200,10 V100 H0 Z" fill="%236bb3f5" opacity="0.2"/></svg>') no-repeat center bottom;
+    background-size: cover;
     color: white;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+    margin-top: 0px;
+}
+
+.cta-section::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 100" preserveAspectRatio="none"><path d="M0,100 Q300,0 600,100 T1200,100 V0 H0 Z" fill="%23f8fafc"/></path></svg>') no-repeat;
+    background-size: cover;
+    z-index: 2;
+}
+
+.cta-section::after {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 100" preserveAspectRatio="none"><path d="M0,100 Q200,50 400,40 T600,30 800,20 1000,10 1200,0 V100 H0 Z" fill="%234a90e2" opacity="0.4"/><path d="M0,100 Q250,45 500,35 T750,25 1000,15 1200,5 V100 H0 Z" fill="%235ba0f2" opacity="0.3"/><path d="M0,100 Q300,40 600,30 T900,20 1200,10 V100 H0 Z" fill="%236bb3f5" opacity="0.2"/></svg>') no-repeat;
+    background-size: cover;
+    z-index: 2;
 }
 
 .cta-buttons {
@@ -736,7 +777,7 @@ section h2::after {
 }
 
 .cta-section h2::after {
-    display: none;
+    display: block;
 }
 
 /* Responsive */
