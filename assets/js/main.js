@@ -21,14 +21,18 @@ document.addEventListener('DOMContentLoaded', () => {
                     window.closeMobileMenu();
                     // Delay scroll to allow menu to close
                     setTimeout(() => {
-                        const header = document.querySelector('.site-header');
-                        const headerHeight = header ? header.offsetHeight : 0;
-                        window.scrollTo({ top: target.offsetTop - headerHeight, behavior: 'smooth' });
+                        if (href === '#top') {
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                        } else {
+                            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
                     }, 350);
                 } else {
-                    const header = document.querySelector('.site-header');
-                    const headerHeight = header ? header.offsetHeight : 0;
-                    window.scrollTo({ top: target.offsetTop - headerHeight, behavior: 'smooth' });
+                    if (href === '#top') {
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                    } else {
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
                 }
 
                 if (history && history.pushState) {
@@ -156,16 +160,27 @@ document.addEventListener('DOMContentLoaded', () => {
     (function initScrollSpy() {
         const header = document.querySelector('.site-header');
         const navLinks = Array.from(document.querySelectorAll('.site-nav a'));
-        const sections = navLinks.map(l => l.getAttribute('href')).filter(h => h && h.startsWith('#')).map(h => document.querySelector(h)).filter(Boolean);
+        const sections = navLinks.map(l => l.getAttribute('href')).filter(h => h && h.startsWith('#') && h !== '#top').map(h => document.querySelector(h)).filter(Boolean);
         if (!sections.length) return;
         const getHeaderOffset = () => (header ? header.offsetHeight : 0);
-        const makeIoOptions = () => ({ root: null, rootMargin: `-${getHeaderOffset()}px 0px -40% 0px`, threshold: [0,0.15,0.4,0.6] });
+        const makeIoOptions = () => ({ root: null, rootMargin: `-${getHeaderOffset()}px 0px -10% 0px`, threshold: [0,0.15,0.4,0.6] });
         const ioCallback = (entries) => {
             const visible = entries.filter(e => e.isIntersecting);
-            if (!visible.length) return;
+            navLinks.forEach(l => l.classList.remove('active'));
+            if (window.scrollY < 100) {
+                const homeLink = document.querySelector('.site-nav a[href="#top"]');
+                if (homeLink) homeLink.classList.add('active');
+                return;
+            }
+            if (!visible.length) {
+                if (window.scrollY > document.body.scrollHeight - window.innerHeight - 100) {
+                    const testimonialsLink = document.querySelector('.site-nav a[href="#testimonials"]');
+                    if (testimonialsLink) testimonialsLink.classList.add('active');
+                }
+                return;
+            }
             visible.sort((a,b) => b.intersectionRatio - a.intersectionRatio);
             const top = visible[0].target;
-            navLinks.forEach(l => l.classList.remove('active'));
             const activeLink = document.querySelector(`.site-nav a[href="#${top.id}"]`);
             if (activeLink) activeLink.classList.add('active');
         };

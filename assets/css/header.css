@@ -57,6 +57,7 @@
     font-weight: 600;
     transition: color 160ms ease, opacity 160ms ease;
 }
+
 .site-nav a.active { color: var(--brand-2); }
 .site-nav a.active::after {
     content: "";
@@ -152,6 +153,8 @@
         visibility: visible;
         transition: transform 300ms ease, visibility 0s 0s;
     }
+
+
 
     /* staggered reveal for nav items */
     .site-nav.open a:nth-child(1) { transition-delay: 60ms; }

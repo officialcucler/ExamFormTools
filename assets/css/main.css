@@ -277,7 +277,7 @@ html {
 
 .ticket-header {
     text-align: center;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .ticket-header svg {
@@ -305,7 +305,7 @@ html {
 .ticket-details {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .detail-left, .detail-right {
@@ -340,7 +340,7 @@ html {
     font-style: italic;
     line-height: 1.5;
     color: var(--muted-2);
-    margin: 0;
+    margin: 0 0 1.5rem 0;
 }
 
 .ticket-bottom {
@@ -350,7 +350,7 @@ html {
 .ticket-bottom hr {
     border: none;
     border-top: 1px solid #e2e8f0;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .barcode {
