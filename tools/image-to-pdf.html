@@ -1,17 +1,87 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Image to PDF - ExamFormTools</title>
-  <link rel="stylesheet" href="/assets/css/main.css">
-  <script defer src="/assets/js/main.js"></script>
-  <script defer src="/assets/js/image-to-pdf.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convert Images to PDF - Free Online Tool | ExamFormTools</title>
+    <meta name="description" content="Convert multiple images to PDF instantly. Perfect for exam applications, documents, and more. Free, secure, and works offline. No registration required.">
+    <meta name="keywords" content="image to pdf, convert images to pdf, photo to pdf, document converter, exam forms, free tool">
+    <meta name="author" content="ExamFormTools">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://examformtools.in/tools/image-to-pdf.html">
+    <link rel="icon" href="/assets/images/logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/tools.css">
+    <script defer src="/assets/js/include-components.js"></script>
+    <script defer src="/assets/js/main.js"></script>
+    <script defer src="/assets/js/image-to-pdf.js"></script>
 </head>
 <body>
-  <main class="container">
-    <h1>Image to PDF</h1>
-    <p>Tool UI placeholder.</p>
-  </main>
+    <div id="site-header"></div>
+    <main>
+        <section class="tool-hero">
+            <div class="container">
+                <h1>Convert Images to PDF</h1>
+                <p>Transform your photos and images into professional PDF documents instantly. Perfect for exam applications and official submissions.</p>
+            </div>
+        </section>
+
+        <section class="tool-section">
+            <div class="container">
+                <div class="tool-container">
+                    <div class="upload-area" id="upload-area">
+                        <div class="upload-content">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke="#667eea" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <polyline points="14,2 14,8 20,8" stroke="#667eea" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <line x1="16" y1="13" x2="8" y2="13" stroke="#667eea" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <line x1="16" y1="17" x2="8" y2="17" stroke="#667eea" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <polyline points="10,9 9,9 8,9" stroke="#667eea" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <h3>Drop Images Here or Click to Browse</h3>
+                            <p>Supports JPG, PNG, GIF, BMP, WebP (Max 10MB per file)</p>
+                            <input type="file" id="file-input" multiple accept="image/*" style="display: none;">
+                            <button class="btn-primary" id="browse-btn">Choose Files</button>
+                        </div>
+                    </div>
+
+                    <div class="controls-panel" id="controls-panel" style="display: none;">
+                        <div class="input-row">
+                            <div class="select-field">
+                                <label for="page-size">Page Size:</label>
+                                <select id="page-size">
+                                    <option value="a4">A4</option>
+                                    <option value="letter">Letter</option>
+                                    <option value="legal">Legal</option>
+                                </select>
+                            </div>
+                            <div class="select-field">
+                                <label for="orientation">Orientation:</label>
+                                <select id="orientation">
+                                    <option value="portrait">Portrait</option>
+                                    <option value="landscape">Landscape</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="action-buttons">
+                            <button class="btn-secondary" id="clear-btn">Clear All</button>
+                            <button class="btn-primary" id="convert-btn">Convert to PDF</button>
+                        </div>
+                    </div>
+
+                    <div class="preview-container" id="preview-container" style="display: none;">
+                        <div class="image-info">
+                            <span id="file-count">0 files selected</span>
+                            <span id="total-size">Total size: 0 MB</span>
+                        </div>
+                        <div id="image-preview"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div id="site-footer"></div>
+    <div id="share"></div>
+    <div id="move-to-top"></div>
 </body>
 </html>
