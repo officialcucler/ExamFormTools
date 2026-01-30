@@ -668,7 +668,7 @@ html {
 /* CTA */
 .cta-section {
     padding: 100px 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 100" preserveAspectRatio="none"><path d="M0,100 Q200,50 400,40 T600,30 800,20 1000,10 1200,0 V100 H0 Z" fill="%234a90e2" opacity="0.4"/><path d="M0,100 Q250,45 500,35 T750,25 1000,15 1200,5 V100 H0 Z" fill="%235ba0f2" opacity="0.3"/><path d="M0,100 Q300,40 600,30 T900,20 1200,10 V100 H0 Z" fill="%236bb3f5" opacity="0.2"/></svg>') no-repeat center bottom;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 100" preserveAspectRatio="none"><path d="M0,100 Q200,40 400,30 T600,20 800,10 1000,0 1200,-10 V100 H0 Z" fill="%23667eea" opacity="0.4"/><path d="M0,100 Q250,35 500,25 T750,15 1000,5 1200,-5 V100 H0 Z" fill="%23764ba2" opacity="0.3"/><path d="M0,100 Q300,30 600,20 T900,10 1200,0 V100 H0 Z" fill="%23667eea" opacity="0.2"/></svg>') no-repeat center bottom;
     background-size: cover;
     color: white;
     text-align: center;
@@ -778,6 +778,11 @@ section h2::after {
 
 .cta-section h2::after {
     display: block;
+}
+
+.highlight {
+    font-weight: bold;
+    color: var(--success);
 }
 
 /* Responsive */
