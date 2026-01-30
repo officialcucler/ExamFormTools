@@ -650,6 +650,8 @@ section h2 {
 }
 
 @media (max-width: 768px) {
+    body { padding-top: 0; }
+
     .container { padding: 0 20px; }
 
     .hero { padding: 56px 0; }
@@ -679,6 +681,14 @@ section h2 {
     .feature-card {
         flex-shrink: 0;
         width: 280px;
+        transform: rotate(0deg);
+    }
+
+    .feature-card:nth-child(even) {
+        transform: rotate(0deg);
+    }
+
+    .feature-card:nth-child(3n) {
         transform: rotate(0deg);
     }
 
