@@ -68,7 +68,7 @@
     margin: 6px auto 0;
     border-radius: 3px;
 }
-.nav-actions { display: flex; align-items: center; gap: 0.75rem; }
+.nav-actions { display: flex; align-items: center; gap: 0.75rem; margin-left: auto; }
 .nav-toggle {
     display: none;
     background: transparent;
