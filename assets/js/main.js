@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    document.querySelectorAll('.tools-section, .stats-section, .categories-section, .features-section').forEach(el => {
+    document.querySelectorAll('.tools-section, .stats-section, .categories-section, .features-section, .testimonial-section').forEach(el => {
         const isMobile = window.innerWidth <= 768;
         if (el.classList.contains('categories-section') && isMobile) {
             // On mobile, keep categories visible but still animate transform

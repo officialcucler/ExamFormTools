@@ -1,4 +1,4 @@
-/* Main stylesheet moved from css/style.css */
+ents /* Main stylesheet moved from css/style.css */
 /* (content copied from previous stylesheet) */
 * {
     margin: 0;
@@ -189,20 +189,178 @@ html {
 
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
-    margin: 3rem 0;
+    margin: 3rem 0 5rem;
 }
 
 .feature-card {
     text-align: center;
-    padding: 2rem 1rem;
+    padding: 3rem 1.5rem 5rem;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 95% 100%, 90% 100%, 85% 100%, 80% 100%, 75% 100%, 70% 100%, 65% 100%, 60% 100%, 55% 100%, 50% 100%, 45% 100%, 40% 100%, 35% 100%, 30% 100%, 25% 100%, 20% 100%, 15% 100%, 10% 100%, 5% 100%, 0% 100%);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12), 0 4px 10px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.06);
+    transform: rotate(-1deg);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    min-height: 350px;
+    max-height: 390px;
+    backdrop-filter: blur(10px);
+    border-radius: 16px 16px 0 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.feature-card:nth-child(1) {
+    background: linear-gradient(135deg, var(--accent-1), #ee5a24);
+    color: white;
+}
+
+.feature-card:nth-child(1) h3 {
+    color: white;
+}
+
+.feature-card:nth-child(1) .card-subtitle {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.feature-card:nth-child(1) .card-bullets li {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.feature-card:nth-child(1) .card-footer {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.feature-card:nth-child(2) {
+    background: linear-gradient(135deg, #dbeafe, #bfdbfe); /* Blue gradient */
+    color: #1e40af;
+}
+
+.feature-card:nth-child(2) h3 {
+    color: #1e40af;
+}
+
+.feature-card:nth-child(2) .card-subtitle {
+    color: #1d4ed8;
+}
+
+.feature-card:nth-child(2) .card-bullets li {
+    color: #1d4ed8;
+}
+
+.feature-card:nth-child(3) {
+    background: linear-gradient(135deg, #dcfce7, #bbf7d0); /* Green gradient */
+    color: #166534;
+}
+
+.feature-card:nth-child(3) h3 {
+    color: #166534;
+}
+
+.feature-card:nth-child(3) .card-subtitle {
+    color: #15803d;
+}
+
+.feature-card:nth-child(3) .card-bullets li {
+    color: #15803d;
+}
+
+.feature-card:nth-child(4) {
+    background: linear-gradient(135deg, #fce7f3, #fbcfe8); /* Pink gradient */
+    color: #be185d;
+}
+
+.feature-card:nth-child(4) h3 {
+    color: #be185d;
+}
+
+.feature-card:nth-child(4) .card-subtitle {
+    color: #db2777;
+}
+
+.feature-card:nth-child(4) .card-bullets li {
+    color: #db2777;
+}
+
+.feature-card:nth-child(even) {
+    transform: rotate(1deg);
+}
+
+.feature-card:nth-child(3n) {
+    transform: rotate(-0.5deg);
+}
+
+.feature-card:hover {
+    transform: rotate(0deg) translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.card-icon {
+    margin-bottom: 1rem;
+    color: #1f2937;
+}
+
+.card-icon svg {
+    width: 48px;
+    height: 48px;
 }
 
 .feature-card h3 {
-    color: var(--text-strong);
-    margin-bottom: 0.6rem;
-    font-size: clamp(1rem, 1.6vw, 1.15rem);
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #1f2937;
+}
+
+.card-subtitle {
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.card-bullets {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+    flex-grow: 1;
+}
+
+.card-bullets li {
+    font-size: 0.85rem;
+    color: #374151;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-start;
+    text-align: left;
+}
+
+.check {
+    color: #10b981;
+    margin-right: 0.5rem;
+    font-weight: bold;
+    display: inline-block;
+    vertical-align: baseline;
+}
+
+.card-divider {
+    border: none;
+    border-top: 1px solid white;
+    margin: 1rem 0;
+}
+
+.card-footer {
+    font-size: 0.8rem;
+    color: #9ca3af;
+    font-weight: 500;
 }
 
 .cert-badges {
@@ -508,6 +666,22 @@ section h2 {
 
     .tools-grid, .categories-grid { grid-template-columns: 1fr; }
 
+    .features-grid {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 1rem;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        padding: 0 1rem;
+        width: 100%;
+    }
+
+    .feature-card {
+        flex-shrink: 0;
+        width: 280px;
+        transform: rotate(0deg);
+    }
+
     /* Mobile nav behavior */
     /* header/nav responsive rules moved to header.css */
 
@@ -619,5 +793,16 @@ section h2 {
     .move-to-top-btn svg {
         width: 18px;
         height: 18px;
+    }
+}
+
+/* Mobile-only elements */
+.mobile-only {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .mobile-only {
+        display: block;
     }
 }
