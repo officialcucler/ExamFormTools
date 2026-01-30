@@ -594,6 +594,14 @@ html {
         max-width: 100%;
     }
 
+    .testimonials-grid::-webkit-scrollbar {
+        display: none;
+    }
+
+    .testimonials-grid {
+        scrollbar-width: none;
+    }
+
     .testimonial-card {
         flex-shrink: 0;
         width: calc(100vw - 6rem);
@@ -743,6 +751,14 @@ section h2 {
         scroll-snap-type: x mandatory;
         margin: 0 auto;
         max-width: 100%;
+    }
+
+    .features-grid::-webkit-scrollbar {
+        display: none;
+    }
+
+    .features-grid {
+        scrollbar-width: none;
     }
 
     .feature-card {
