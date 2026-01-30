@@ -465,8 +465,8 @@ html {
 .testimonial-card {
     background: white;
     width: 100%;
-    max-width: 250px;
-    min-height: 400px;
+    max-width: 280px;
+    min-height: 350px;
     margin: 0 auto;
     border-radius: 26px;
     border: 1px solid #000;
