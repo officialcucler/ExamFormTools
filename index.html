@@ -27,6 +27,11 @@
     <meta property="twitter:description" content="Process documents for SSC, UPSC, Banking, and State exams in seconds. Resize photos, signatures, and compress PDFs to exact specifications. 100% Free, Secure, and Reliable.">
     <meta property="twitter:image" content="https://examformtools.in/assets/images/logo.svg">
 
+    <!-- Performance optimizations -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <!-- Preload critical resources -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style">
     <link rel="stylesheet" href="assets/css/main.css">
@@ -236,7 +241,7 @@
                  data-ad-slot="XXXXXXXXXX"
                  data-ad-format="auto"
                  data-full-width-responsive="true"></ins>
-            <script>
+            <script async>
                  (adsbygoogle = window.adsbygoogle || []).push({});
             </script>
         </div>
@@ -294,30 +299,40 @@
         <div class="container">
             <h2>Supported Exam Categories</h2>
             <div class="categories-grid">
-                <div class="category-card">
-                    <h3>SSC Exams</h3>
-                    <p><strong>Staff Selection Commission</strong><br>Photo: 4-12 KB<br>Signature: 1-12 KB<br>JPG/JPEG only</p>
-                </div>
-                <div class="category-card">
-                    <h3>UPSC Exams</h3>
-                    <p><strong>Union Public Service Commission</strong><br>Photo: 40-240 KB<br>Signature: 10-40 KB<br>JPG format</p>
-                </div>
-                <div class="category-card">
-                    <h3>Banking Exams</h3>
-                    <p><strong>IBPS, SBI, RBI</strong><br>Photo: 20-50 KB<br>Signature: 10-20 KB<br>JPG/JPEG</p>
-                </div>
+                <a href="exams/ssc.html" class="category-card-link">
+                    <div class="category-card">
+                        <h3>SSC Exams</h3>
+                        <p><strong>Staff Selection Commission</strong><br>Photo: 4-12 KB<br>Signature: 1-12 KB<br>JPG/JPEG only</p>
+                    </div>
+                </a>
+                <a href="exams/upsc.html" class="category-card-link">
+                    <div class="category-card">
+                        <h3>UPSC Exams</h3>
+                        <p><strong>Union Public Service Commission</strong><br>Photo: 40-240 KB<br>Signature: 10-40 KB<br>JPG format</p>
+                    </div>
+                </a>
+                <a href="exams/banking.html" class="category-card-link">
+                    <div class="category-card">
+                        <h3>Banking Exams</h3>
+                        <p><strong>IBPS, SBI, RBI</strong><br>Photo: 20-50 KB<br>Signature: 10-20 KB<br>JPG/JPEG</p>
+                    </div>
+                </a>
                 <div class="category-card">
                     <h3>JEE & NEET</h3>
                     <p><strong>Engineering & Medical</strong><br>Photo: 10-200 KB<br>Signature: 4-30 KB<br>JPG/JPEG</p>
                 </div>
-                <div class="category-card">
-                    <h3>Railway Exams</h3>
-                    <p><strong>RRB, NTPC, Group D</strong><br>Photo: 15-40 KB<br>Signature: 5-20 KB<br>JPG format</p>
-                </div>
-                <div class="category-card">
-                    <h3>State Exams</h3>
-                    <p><strong>UPSSSC, UP Police, etc.</strong><br>Photo: 10-50 KB<br>Signature: 5-20 KB<br>JPG/JPEG</p>
-                </div>
+                <a href="exams/railway.html" class="category-card-link">
+                    <div class="category-card">
+                        <h3>Railway Exams</h3>
+                        <p><strong>RRB, NTPC, Group D</strong><br>Photo: 15-40 KB<br>Signature: 5-20 KB<br>JPG format</p>
+                    </div>
+                </a>
+                <a href="exams/up-state-exams.html" class="category-card-link">
+                    <div class="category-card">
+                        <h3>State Exams</h3>
+                        <p><strong>UPSSSC, UP Police, etc.</strong><br>Photo: 10-50 KB<br>Signature: 5-20 KB<br>JPG/JPEG</p>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
@@ -709,7 +724,7 @@
 
     <div id="share"></div>
     <div id="move-to-top"></div>
-    <script src="assets/js/include-components.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/include-components.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
 </body>
 </html>

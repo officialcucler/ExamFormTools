@@ -163,6 +163,18 @@ html {
     margin-top: 3rem;
 }
 
+.category-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.category-card-link:hover .category-card {
+    transform: translateY(-8px);
+    box-shadow: 0 14px 35px rgba(118, 75, 162, 0.2);
+}
+
 .category-card {
     background: white;
     padding: 2rem;
