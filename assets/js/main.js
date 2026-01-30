@@ -216,52 +216,60 @@ document.addEventListener('DOMContentLoaded', () => {
         statsObserver.observe(statsSection);
     }
 
+
+
+    // Features carousel
+    (() => {
+        const featuresGrid = document.querySelector('.features-grid');
+        const prevBtn = document.getElementById('features-prev');
+        const nextBtn = document.getElementById('features-next');
+
+        if (!featuresGrid || !prevBtn || !nextBtn) return;
+
+        const getCardWidth = () => {
+            const card = featuresGrid.querySelector('.feature-card');
+            return card ? card.offsetWidth + 16 : 300; // card width + gap
+        };
+
+        const scrollLeft = () => {
+            const scrollAmount = getCardWidth();
+            featuresGrid.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+        };
+
+        const scrollRight = () => {
+            const scrollAmount = getCardWidth();
+            featuresGrid.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        };
+
+        prevBtn.addEventListener('click', scrollLeft);
+        nextBtn.addEventListener('click', scrollRight);
+    })();
+
     // Testimonials carousel
     (() => {
-        const cards = document.querySelectorAll('.testimonial-card');
-        const dots = document.querySelectorAll('.carousel-dots .dot');
+        const testimonialsGrid = document.querySelector('.testimonials-grid');
         const prevBtn = document.getElementById('testimonial-prev');
         const nextBtn = document.getElementById('testimonial-next');
 
-        if (!cards.length) return;
+        if (!testimonialsGrid || !prevBtn || !nextBtn) return;
 
-        let current = 0;
-
-        const showCard = (index) => {
-            cards.forEach((card, i) => {
-                card.classList.remove('active', 'prev');
-                if (i === index) {
-                    card.classList.add('active');
-                } else if (i < index) {
-                    card.classList.add('prev');
-                }
-            });
-            dots.forEach((dot, i) => {
-                dot.classList.toggle('active', i === index);
-            });
+        const getCardWidth = () => {
+            const card = testimonialsGrid.querySelector('.testimonial-card');
+            return card ? card.offsetWidth + 16 : 300; // card width + gap
         };
 
-        const nextCard = () => {
-            current = (current + 1) % cards.length;
-            showCard(current);
+        const scrollLeft = () => {
+            const scrollAmount = getCardWidth();
+            testimonialsGrid.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
         };
 
-        const prevCard = () => {
-            current = (current - 1 + cards.length) % cards.length;
-            showCard(current);
+        const scrollRight = () => {
+            const scrollAmount = getCardWidth();
+            testimonialsGrid.scrollBy({ left: scrollAmount, behavior: 'smooth' });
         };
 
-        prevBtn?.addEventListener('click', prevCard);
-        nextBtn?.addEventListener('click', nextCard);
-
-        dots.forEach(dot => {
-            dot.addEventListener('click', () => {
-                current = parseInt(dot.getAttribute('data-index'), 10);
-                showCard(current);
-            });
-        });
-
-        showCard(0);
+        prevBtn.addEventListener('click', scrollLeft);
+        nextBtn.addEventListener('click', scrollRight);
     })();
 
     // Animate testimonial cards on scroll
