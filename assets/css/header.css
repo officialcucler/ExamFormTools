@@ -121,7 +121,7 @@
 
 /* Mobile nav behavior */
 @media (max-width: 768px) {
-    .nav-toggle { display: inline-flex; }
+    .nav-toggle { display: inline-flex; width: 48px; height: 48px; background: rgba(255,255,255,0.1); border-radius: 6px; padding: 12px; }
     .site-header .header-inner { padding: 12px 8px; justify-content: space-between; }
 
     .site-nav {
@@ -137,10 +137,10 @@
         padding: 60px 18px 0 18px;
         box-shadow: -4px 0 12px rgba(2,6,23,0.12);
         border: 1px solid rgba(2,6,23,0.06);
-        transform: translateX(100%);
-        visibility: hidden;
-        transition: transform 300ms ease, visibility 0s 300ms;
-        z-index: 1001;
+    transform: translateX(100%);
+    visibility: hidden;
+    transition: transform 300ms ease, visibility 0s 300ms;
+    z-index: 1003;
     }
     .site-nav a {
         padding: 12px 18px;
