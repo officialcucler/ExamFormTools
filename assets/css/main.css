@@ -113,12 +113,12 @@ html {
 }
 
 .feature-badge {
-    background: rgba(255,255,255,0.12);
+    background: white;
     padding: 0.35rem 0.9rem;
     border-radius: 999px;
     font-weight: 600;
     font-size: var(--fs-sm);
-    color: rgba(255,255,255,0.98);
+    color: var(--success);
 }
 
 /* Tools */
@@ -134,6 +134,7 @@ html {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 2rem;
     text-align: center;
+    margin-top: 2rem;
 }
 
 .stat-number {
@@ -451,9 +452,11 @@ html {
 .testimonial-card {
     background: white;
     width: 100%;
-    max-width: 300px;
+    max-width: 250px;
+    min-height: 400px;
     margin: 0 auto;
     border-radius: 26px;
+    border: 1px solid #000;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     display: flex;
     flex-direction: column;
@@ -463,6 +466,7 @@ html {
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.3s ease;
+    filter: grayscale(100%) contrast(200%);
 }
 
 .testimonial-card.animate {
@@ -480,6 +484,10 @@ html {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
+.testimonial-card svg {
+    filter: none !important;
+}
+
 .ticket-header {
     text-align: center;
     margin-bottom: 1.5rem;
@@ -487,6 +495,7 @@ html {
 
 .ticket-header svg {
     margin-bottom: 0.5rem;
+    filter: none !important;
 }
 
 .ticket-header h3 {
@@ -535,7 +544,7 @@ html {
 }
 
 .detail-value {
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 600;
     color: var(--text-strong);
 }
@@ -605,7 +614,8 @@ html {
     .testimonial-card {
         flex-shrink: 0;
         width: calc(100vw - 6rem);
-        max-width: 280px;
+        max-width: 220px;
+        min-height: 350px;
         transform: rotate(0deg);
         scroll-snap-align: start;
         margin: 0 auto;
@@ -629,7 +639,7 @@ html {
     }
 
     .detail-value {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
 
     .ticket-quote p {
@@ -710,6 +720,23 @@ section h2 {
     margin-bottom: 0.9rem;
     color: var(--text);
     letter-spacing: -0.02em;
+    position: relative;
+}
+
+section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    border-radius: 2px;
+}
+
+.cta-section h2::after {
+    display: none;
 }
 
 /* Responsive */

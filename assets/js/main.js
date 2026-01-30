@@ -7,6 +7,7 @@ const waitForComponents = (cb) => {
 
 document.addEventListener('DOMContentLoaded', () => {
     waitForComponents(() => {
+    // Testimonial cards visibility handled by section animation
     // Smooth scrolling for anchor links + update URL without jump
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -83,6 +84,16 @@ document.addEventListener('DOMContentLoaded', () => {
             el.style.transform = 'translateY(30px)';
             el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
             observer.observe(el);
+
+            // Check if element is already in view and animate immediately
+            const rect = el.getBoundingClientRect();
+            const isInView = rect.top < window.innerHeight && rect.bottom > 0;
+            if (isInView) {
+                setTimeout(() => {
+                    el.style.opacity = '1';
+                    el.style.transform = 'translateY(0)';
+                }, 100);
+            }
         }
     });
 
@@ -272,19 +283,24 @@ document.addEventListener('DOMContentLoaded', () => {
         nextBtn.addEventListener('click', scrollRight);
     })();
 
-    // Animate testimonial cards on scroll
-    const testimonialObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('animate');
-                testimonialObserver.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    // Animate testimonial cards
+    const testimonialSection = document.querySelector('.testimonial-section');
+    if (testimonialSection) {
+        const testimonialObserver = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const cards = entry.target.querySelectorAll('.testimonial-card');
+                    cards.forEach(card => card.classList.add('animate'));
+                    testimonialObserver.disconnect();
+                }
+            });
+        }, { threshold: 0.3 });
+        testimonialObserver.observe(testimonialSection);
+    }
 
-    document.querySelectorAll('.testimonial-card').forEach(card => {
-        testimonialObserver.observe(card);
-    });
+
+
+
 
     // Share Button
     (() => {
