@@ -224,147 +224,195 @@ html {
 
 /* Testimonial */
 .testimonial-section {
-    padding: 80px 0;
-    background: white;
+    padding: 80px 0 120px;
+    background: #f8fafc;
     color: var(--text);
     text-align: center;
 }
 
 .testimonials-carousel {
     position: relative;
-    max-width: 900px;
+    max-width: 1200px;
     margin: 3rem auto 0;
 }
 
 .testimonials-grid {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    gap: 2rem;
     position: relative;
-    height: 260px;
 }
 
 .testimonial-card {
     background: white;
-    padding: 2rem 1.5rem;
-    border-radius: 16px;
-    border-left: 4px solid var(--brand-1);
-    box-shadow: 0 8px 24px rgba(102, 126, 234, 0.15);
-    position: absolute;
     width: 100%;
-    height: 100%;
+    max-width: 330px;
+    margin: 0 auto;
+    border-radius: 26px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.5rem;
+    position: relative;
     opacity: 0;
-    transform: translateX(100px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-    pointer-events: none;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.3s ease;
 }
 
-.testimonial-card.active {
+.testimonial-card.animate {
     opacity: 1;
-    transform: translateX(0);
-    pointer-events: auto;
+    transform: translateY(0);
 }
 
-.testimonial-card.prev {
-    transform: translateX(-100px);
+.testimonial-card:nth-child(1) { transition-delay: 0s; }
+.testimonial-card:nth-child(2) { transition-delay: 0.2s; }
+.testimonial-card:nth-child(3) { transition-delay: 0.4s; }
+.testimonial-card:nth-child(4) { transition-delay: 0.6s; }
+
+.testimonial-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
-.testimonial-card p {
-    font-size: 1rem;
-    font-style: italic;
-    margin-bottom: 1.5rem;
-    line-height: 1.6;
-    color: var(--muted-2);
+.ticket-header {
+    text-align: center;
+    margin-bottom: 1rem;
 }
 
-.testimonial-card h4 {
-    font-size: 1.1rem;
-    margin-bottom: 0.3rem;
-    font-weight: 700;
+.ticket-header svg {
+    margin-bottom: 0.5rem;
+}
+
+.ticket-header h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
     color: var(--text-strong);
+    margin-bottom: 0.25rem;
 }
 
-.testimonial-card span {
-    font-size: 0.9rem;
+.ticket-header p {
+    font-size: 0.875rem;
     color: var(--muted);
 }
 
-.carousel-prev, .carousel-next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: var(--brand-1);
-    color: white;
+.dashed-divider {
     border: none;
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    font-size: 1.5rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    z-index: 10;
+    border-top: 1px dashed #e2e8f0;
+    margin: 1rem 0;
 }
 
-.carousel-prev:hover, .carousel-next:hover {
-    background: var(--brand-2);
-    transform: translateY(-50%) scale(1.1);
-}
-
-.carousel-prev {
-    left: -60px;
-}
-
-.carousel-next {
-    right: -60px;
-}
-
-.carousel-dots {
+.ticket-details {
     display: flex;
-    justify-content: center;
-    gap: 0.75rem;
-    margin-top: 2rem;
+    justify-content: space-between;
+    margin-bottom: 1rem;
 }
 
-.dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: #e2e8f0;
-    cursor: pointer;
-    transition: all 0.3s ease;
+.detail-left, .detail-right {
+    flex: 1;
 }
 
-.dot.active {
-    background: var(--brand-1);
-    width: 28px;
-    border-radius: 5px;
+.detail-left {
+    text-align: left;
+}
+
+.detail-right {
+    text-align: right;
+}
+
+.detail-left label, .detail-right label {
+    font-size: 0.75rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.detail-value {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-strong);
+}
+
+.ticket-quote p {
+    font-size: 0.9rem;
+    font-style: italic;
+    line-height: 1.5;
+    color: var(--muted-2);
+    margin: 0;
+}
+
+.ticket-bottom {
+    margin-top: auto;
+}
+
+.ticket-bottom hr {
+    border: none;
+    border-top: 1px solid #e2e8f0;
+    margin-bottom: 1rem;
+}
+
+.barcode {
+    display: block;
+    margin: 0 auto;
+    width: 180px;
+    height: auto;
+}
+
+.carousel-prev, .carousel-next, .carousel-dots {
+    display: none;
 }
 
 @media (max-width: 768px) {
     .testimonials-carousel {
         max-width: 100%;
-    }
-
-    .carousel-prev, .carousel-next {
-        position: relative;
-        top: auto;
-        transform: none;
-        width: 40px;
-        height: 40px;
-        font-size: 1.2rem;
-        margin: 0 0.5rem;
-    }
-
-    .carousel-prev, .carousel-next {
-        margin-top: 1.5rem;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
     }
 
     .testimonials-grid {
-        height: 240px;
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 1rem;
+        width: max-content;
+        padding: 0 1rem;
     }
 
-    .carousel-controls {
-        display: flex;
-        justify-content: center;
-        gap: 0.5rem;
+    .testimonial-card {
+        width: 280px;
+        flex-shrink: 0;
+        padding: 1rem;
+    }
+
+    .carousel-prev, .carousel-next, .carousel-dots {
+        display: none;
+    }
+
+    .ticket-header svg {
+        width: 40px;
+        height: 40px;
+    }
+
+    .ticket-header h3 {
+        font-size: 1.1rem;
+    }
+
+    .ticket-header p {
+        font-size: 0.8rem;
+    }
+
+    .detail-value {
+        font-size: 0.9rem;
+    }
+
+    .ticket-quote p {
+        font-size: 0.85rem;
+    }
+
+    .barcode {
+        width: 150px;
+        height: auto;
     }
 }
 

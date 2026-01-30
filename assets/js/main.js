@@ -207,11 +207,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const dots = document.querySelectorAll('.carousel-dots .dot');
         const prevBtn = document.getElementById('testimonial-prev');
         const nextBtn = document.getElementById('testimonial-next');
-        
+
         if (!cards.length) return;
-        
+
         let current = 0;
-        
+
         const showCard = (index) => {
             cards.forEach((card, i) => {
                 card.classList.remove('active', 'prev');
@@ -225,29 +225,43 @@ document.addEventListener('DOMContentLoaded', () => {
                 dot.classList.toggle('active', i === index);
             });
         };
-        
+
         const nextCard = () => {
             current = (current + 1) % cards.length;
             showCard(current);
         };
-        
+
         const prevCard = () => {
             current = (current - 1 + cards.length) % cards.length;
             showCard(current);
         };
-        
+
         prevBtn?.addEventListener('click', prevCard);
         nextBtn?.addEventListener('click', nextCard);
-        
+
         dots.forEach(dot => {
             dot.addEventListener('click', () => {
                 current = parseInt(dot.getAttribute('data-index'), 10);
                 showCard(current);
             });
         });
-        
+
         showCard(0);
     })();
+
+    // Animate testimonial cards on scroll
+    const testimonialObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate');
+                testimonialObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+    document.querySelectorAll('.testimonial-card').forEach(card => {
+        testimonialObserver.observe(card);
+    });
 
     // Share Button
     (() => {
