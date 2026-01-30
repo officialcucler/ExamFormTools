@@ -880,7 +880,7 @@ section h2::after {
     right: 20px;
     width: 50px;
     height: 50px;
-    background: linear-gradient(135deg, var(--brand-1), var(--brand-2));
+    background: white;
     border: none;
     border-radius: 50%;
     color: white;
@@ -931,7 +931,7 @@ section h2::after {
     right: 20px;
     width: 50px;
     height: 50px;
-    background: linear-gradient(135deg, var(--brand-1), var(--brand-2));
+    background: white;
     border: none;
     border-radius: 50%;
     color: white;
