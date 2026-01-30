@@ -68,7 +68,7 @@
     margin: 6px auto 0;
     border-radius: 3px;
 }
-.nav-actions { display: flex; align-items: center; gap: 0.75rem; margin-left: auto; }
+.nav-actions { display: flex; align-items: center; gap: 0.75rem; }
 .nav-toggle {
     display: none;
     background: transparent;
@@ -124,8 +124,6 @@
     .nav-toggle { display: inline-flex; }
     .site-header .header-inner { padding: 12px 8px; justify-content: space-between; }
 
-    .site-header { position: static; }
-
     .site-nav {
         display: flex;
         position: fixed;
@@ -136,7 +134,7 @@
         background: rgba(255,255,255,0.98);
         flex-direction: column;
         gap: 0;
-        padding: 60px 0 0 0;
+        padding: 60px 18px 0 18px;
         box-shadow: -4px 0 12px rgba(2,6,23,0.12);
         border: 1px solid rgba(2,6,23,0.06);
         transform: translateX(100%);

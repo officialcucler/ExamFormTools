@@ -650,7 +650,6 @@ section h2 {
 }
 
 @media (max-width: 768px) {
-    body { padding-top: 0; }
 
     .container { padding: 0 20px; }
 
@@ -684,13 +683,6 @@ section h2 {
         transform: rotate(0deg);
     }
 
-    .feature-card:nth-child(even) {
-        transform: rotate(0deg);
-    }
-
-    .feature-card:nth-child(3n) {
-        transform: rotate(0deg);
-    }
 
     /* Mobile nav behavior */
     /* header/nav responsive rules moved to header.css */
