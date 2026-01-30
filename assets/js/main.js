@@ -308,7 +308,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!shareBtn) return;
 
         const toggleVisibility = () => {
-            if (window.pageYOffset > 100) {
+            if (window.pageYOffset > 0) {
                 shareBtn.classList.add('show');
             } else {
                 shareBtn.classList.remove('show');
