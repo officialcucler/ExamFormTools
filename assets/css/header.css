@@ -30,12 +30,21 @@
     font-size: 1.1rem;
 }
 
+.logo-img {
+    height: 2.3rem;
+    width: auto;
+    max-width: 100%;
+    vertical-align: middle;
+}
+
 .logo-exam {
     color: var(--brand-1);
+    display: none;
 }
 
 .logo-tools {
-    color: #1f2937;
+    color: black;
+    display: none;
 }
 .site-nav {
     display: flex;
@@ -117,6 +126,13 @@
     height: auto;
     box-shadow: 0 6px 20px rgba(2,6,23,0.2);
     z-index: 80;
+}
+
+/* Tablet styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .site-header .header-inner {
+        padding: 14px 16px;
+    }
 }
 
 /* Mobile nav behavior */
