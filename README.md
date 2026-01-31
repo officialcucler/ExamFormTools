@@ -14,27 +14,94 @@ ExamFormTools is a free, web-based application designed to simplify document pro
 
 ## Supported Exam Categories
 
-### SSC Exams (Staff Selection Commission)
-- **Photo**: 4-12 KB, JPG/JPEG only
-- **Signature**: 1-12 KB, JPG/JPEG only
+### Major Central Government Exams
 
-### UPSC Exams (Union Public Service Commission)
+#### Civil Services & Administrative
+- UPSC Civil Services Exam (CSE) – IAS, IPS, IFS, IRS
+- UPSC CAPF (AC) – Assistant Commandant (CRPF, BSF, CISF, ITBP, SSB)
+- UPSC CDS – Combined Defence Services
+- UPSC NDA & NA – National Defence Academy
+- UPSC IES / ESE – Engineering Services
+- UPSC CMS – Combined Medical Services
 - **Photo**: 40-240 KB, JPG format
 - **Signature**: 10-40 KB, JPG format
 
-### Banking Exams (IBPS, SBI, RBI)
+#### Banking Exams
+- IBPS PO – Probationary Officer
+- IBPS Clerk
+- IBPS SO – Specialist Officer
+- SBI PO
+- SBI Clerk
+- RBI Grade B
+- RBI Assistant
+- NABARD Grade A & B
 - **Photo**: 20-50 KB, JPG/JPEG
 - **Signature**: 10-20 KB, JPG/JPEG
 
-### Railway Exams (RRB, NTPC, Group D)
+#### SSC Exams
+- SSC CGL – Combined Graduate Level
+- SSC CHSL – 10+2 Level
+- SSC MTS – Multi Tasking Staff
+- SSC GD Constable
+- SSC JE – Junior Engineer
+- SSC Stenographer
+- **Photo**: 4-12 KB, JPG/JPEG only
+- **Signature**: 1-12 KB, JPG/JPEG only
+
+#### Railway Exams
+- RRB NTPC
+- RRB Group D
+- RRB JE
+- RRB ALP – Assistant Loco Pilot
 - **Photo**: 15-40 KB, JPG format
 - **Signature**: 5-20 KB, JPG format
 
-### State Exams (UPSSSC, UP Police, etc.)
+#### Teaching (Central)
+- CTET – Central Teacher Eligibility Test
+- KVS / NVS Exams – Kendriya & Navodaya Vidyalaya
+
+#### Defence & Paramilitary
+- AFCAT – Air Force Common Admission Test
+- Indian Navy SSR / AA
+- Indian Army Agniveer
+- BSF / CISF / CRPF / ITBP Exams
+
+### Major State Government Exams
+
+#### State Public Service Commission (PCS)
+- UPPSC PCS – Uttar Pradesh
+- BPSC – Bihar
+- MPPSC – Madhya Pradesh
+- RPSC – Rajasthan
+- MPSC – Maharashtra
+- WBPSC – West Bengal
+- TNPSC – Tamil Nadu
+- APPSC / TSPSC – Andhra Pradesh / Telangana
+- KPSC – Karnataka
+
+#### State Police Exams
+- State Police Constable
+- Sub-Inspector (SI)
+- DSP (via PSC)
+
+#### State Teaching Exams
+- State TET (UPTET, REET, CTET-linked state exams)
+- Primary Teacher / TGT / PGT Exams
+- Assistant Professor (State PSC)
+
+#### State SSC & Other Exams
+- State SSC (e.g., UPSSSC, RSMSSB)
+- Forest Guard / VDO / Patwari
+- Clerk & Secretariat Exams
+
+#### State Judiciary
+- Civil Judge (PCS-J)
+- Judicial Services Exam
 - **Photo**: 10-50 KB, JPG/JPEG
 - **Signature**: 5-20 KB, JPG/JPEG
 
-### JEE & NEET
+### Entrance Exams
+- JEE & NEET
 - **Photo**: 10-200 KB, JPG/JPEG
 - **Signature**: 4-30 KB, JPG/JPEG
 
