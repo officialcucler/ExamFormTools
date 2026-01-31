@@ -86,10 +86,20 @@
     height: 34px;
     flex-direction: column;
     justify-content: center;
-    gap: 4px;
+    gap: 6px;
     padding: 4px;
+    position: relative;
 }
-.nav-toggle span { display: block; height: 3px; background: var(--text); border-radius: 3px; }
+.nav-toggle .line {
+    display: block;
+    height: 3px;
+    background: var(--text);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    transform-origin: center;
+}
+.nav-toggle .line1 { width: 20px; }
+.nav-toggle .line2 { width: 16px; }
 
 .nav-cancel {
     display: none;
@@ -193,9 +203,8 @@
     .nav-overlay.visible { opacity: 1; pointer-events: auto; }
 
     /* animated toggle to X when open */
-    .nav-toggle.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
-    .nav-toggle.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
-    .nav-toggle.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+    .nav-toggle.open .line1 { transform: rotate(45deg); width: 24px; }
+    .nav-toggle.open .line2 { transform: rotate(-45deg); width: 24px; }
 
     .nav-cancel { display: block; }
 }
