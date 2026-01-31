@@ -76,6 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const isMobile = window.innerWidth <= 768;
         if ((el.classList.contains('categories-section') || el.classList.contains('tools-section')) && isMobile) {
             // On mobile, keep categories and tools visible but still animate transform
+            el.style.opacity = '1';
             el.style.transform = 'translateY(0)';
             el.style.transition = 'transform 0.6s ease';
             observer.observe(el);
