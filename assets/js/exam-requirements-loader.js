@@ -227,7 +227,7 @@ class ExamRequirementsLoader {
 }
 
 // Auto-initialize based on current page
-document.addEventListener('DOMContentLoaded', () => {
+(() => {
     const path = window.location.pathname;
     let examKey = null;
 
@@ -249,4 +249,4 @@ document.addEventListener('DOMContentLoaded', () => {
         const loader = new ExamRequirementsLoader();
         loader.init(examKey);
     }
-});
+})();
