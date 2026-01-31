@@ -443,7 +443,7 @@ html {
 /* Testimonial */
 .testimonial-section {
     padding: 80px 0;
-    background: #f8fafc;
+    background: white;
     color: var(--text);
     text-align: center;
     position: relative;
