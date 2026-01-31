@@ -314,6 +314,7 @@ html {
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    transform: perspective(1000px) rotateX(5deg) rotateY(5deg);
 }
 
 .feature-card:nth-child(1) {
@@ -397,8 +398,8 @@ html {
 }
 
 .feature-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    transform: perspective(1000px) rotateX(10deg) rotateY(-10deg) translateY(-12px);
+    box-shadow: 0 20px 40px rgba(118, 75, 162, 0.3), 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .card-icon {
