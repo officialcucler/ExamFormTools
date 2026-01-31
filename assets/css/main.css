@@ -153,7 +153,6 @@ html {
 /* Categories */
 .categories-section {
     padding: 80px 0;
-    background: white;
 }
 
 .categories-grid {
@@ -187,7 +186,7 @@ html {
     align-items: center;
     text-align: center;
     color: #1f2937;
-    background: rgba(255, 255, 255, 0.9);
+    background: transparent;
     border: 2px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
@@ -1031,6 +1030,17 @@ section h2::after {
     .move-to-top-btn svg {
         width: 18px;
         height: 18px;
+    }
+}
+
+/* Desktop-specific adjustments */
+@media (min-width: 769px) {
+    .categories-section {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+    }
+    .category-card {
+        transform: none;
     }
 }
 
