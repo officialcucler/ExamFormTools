@@ -15,12 +15,30 @@
       "resolution": "100-200 DPI"
     },
     "exams": [
-      {"name": "SSC CGL", "description": "Combined Graduate Level Examination"},
-      {"name": "SSC CHSL", "description": "Combined Higher Secondary Level"},
-      {"name": "SSC MTS", "description": "Multi Tasking Staff"},
-      {"name": "SSC CPO", "description": "Central Police Organization"},
-      {"name": "SSC JE", "description": "Junior Engineer"},
-      {"name": "SSC GD", "description": "General Duty"}
+      {
+        "name": "SSC CGL",
+        "description": "Combined Graduate Level Examination"
+      },
+      {
+        "name": "SSC CHSL",
+        "description": "Combined Higher Secondary Level"
+      },
+      {
+        "name": "SSC MTS",
+        "description": "Multi Tasking Staff"
+      },
+      {
+        "name": "SSC CPO",
+        "description": "Central Police Organization"
+      },
+      {
+        "name": "SSC JE",
+        "description": "Junior Engineer"
+      },
+      {
+        "name": "SSC GD",
+        "description": "General Duty"
+      }
     ]
   },
   "upsc": {
@@ -39,11 +57,26 @@
       "resolution": "100-200 DPI"
     },
     "exams": [
-      {"name": "UPSC Civil Services", "description": "Indian Administrative Service"},
-      {"name": "UPSC IFS", "description": "Indian Forest Service"},
-      {"name": "UPSC CDS", "description": "Combined Defence Services"},
-      {"name": "UPSC NDA", "description": "National Defence Academy"},
-      {"name": "UPSC CAPF", "description": "Central Armed Police Forces"}
+      {
+        "name": "UPSC Civil Services",
+        "description": "Indian Administrative Service"
+      },
+      {
+        "name": "UPSC IFS",
+        "description": "Indian Forest Service"
+      },
+      {
+        "name": "UPSC CDS",
+        "description": "Combined Defence Services"
+      },
+      {
+        "name": "UPSC NDA",
+        "description": "National Defence Academy"
+      },
+      {
+        "name": "UPSC CAPF",
+        "description": "Central Armed Police Forces"
+      }
     ]
   },
   "banking": {
@@ -62,12 +95,30 @@
       "resolution": "100-200 DPI"
     },
     "exams": [
-      {"name": "SBI PO", "description": "State Bank of India Probationary Officer"},
-      {"name": "SBI Clerk", "description": "State Bank of India Clerk"},
-      {"name": "IBPS PO", "description": "Institute of Banking Personnel Selection Probationary Officer"},
-      {"name": "IBPS Clerk", "description": "Institute of Banking Personnel Selection Clerk"},
-      {"name": "RBI Grade B", "description": "Reserve Bank of India Grade B Officer"},
-      {"name": "RBI Assistant", "description": "Reserve Bank of India Assistant"}
+      {
+        "name": "SBI PO",
+        "description": "State Bank of India Probationary Officer"
+      },
+      {
+        "name": "SBI Clerk",
+        "description": "State Bank of India Clerk"
+      },
+      {
+        "name": "IBPS PO",
+        "description": "Institute of Banking Personnel Selection Probationary Officer"
+      },
+      {
+        "name": "IBPS Clerk",
+        "description": "Institute of Banking Personnel Selection Clerk"
+      },
+      {
+        "name": "RBI Grade B",
+        "description": "Reserve Bank of India Grade B Officer"
+      },
+      {
+        "name": "RBI Assistant",
+        "description": "Reserve Bank of India Assistant"
+      }
     ]
   },
   "jee-neet": {
@@ -86,10 +137,22 @@
       "resolution": "100-200 DPI"
     },
     "exams": [
-      {"name": "JEE Main", "description": "Joint Entrance Examination Main"},
-      {"name": "JEE Advanced", "description": "Joint Entrance Examination Advanced"},
-      {"name": "NEET UG", "description": "National Eligibility cum Entrance Test"},
-      {"name": "NEET PG", "description": "National Eligibility cum Entrance Test Postgraduate"}
+      {
+        "name": "JEE Main",
+        "description": "Joint Entrance Examination Main"
+      },
+      {
+        "name": "JEE Advanced",
+        "description": "Joint Entrance Examination Advanced"
+      },
+      {
+        "name": "NEET UG",
+        "description": "National Eligibility cum Entrance Test"
+      },
+      {
+        "name": "NEET PG",
+        "description": "National Eligibility cum Entrance Test Postgraduate"
+      }
     ]
   },
   "railway": {
@@ -108,10 +171,22 @@
       "resolution": "100-200 DPI"
     },
     "exams": [
-      {"name": "RRB NTPC", "description": "Railway Recruitment Board Non-Technical Popular Categories"},
-      {"name": "RRB JE", "description": "Railway Recruitment Board Junior Engineer"},
-      {"name": "RRB Group D", "description": "Railway Recruitment Board Group D"},
-      {"name": "RRB ALP", "description": "Railway Recruitment Board Assistant Loco Pilot"}
+      {
+        "name": "RRB NTPC",
+        "description": "Railway Recruitment Board Non-Technical Popular Categories"
+      },
+      {
+        "name": "RRB JE",
+        "description": "Railway Recruitment Board Junior Engineer"
+      },
+      {
+        "name": "RRB Group D",
+        "description": "Railway Recruitment Board Group D"
+      },
+      {
+        "name": "RRB ALP",
+        "description": "Railway Recruitment Board Assistant Loco Pilot"
+      }
     ]
   },
   "up-state-exams": {
@@ -130,11 +205,26 @@
       "resolution": "100-200 DPI"
     },
     "exams": [
-      {"name": "UPPSC PCS", "description": "Uttar Pradesh Public Service Commission Provincial Civil Service"},
-      {"name": "UP Police SI", "description": "Uttar Pradesh Police Sub-Inspector"},
-      {"name": "UPTET", "description": "Uttar Pradesh Teacher Eligibility Test"},
-      {"name": "UPSSSC Junior Assistant", "description": "Uttar Pradesh Subordinate Services Selection Commission"},
-      {"name": "UP Police Constable", "description": "Uttar Pradesh Police Constable"}
+      {
+        "name": "UPPSC PCS",
+        "description": "Uttar Pradesh Public Service Commission Provincial Civil Service"
+      },
+      {
+        "name": "UP Police SI",
+        "description": "Uttar Pradesh Police Sub-Inspector"
+      },
+      {
+        "name": "UPTET",
+        "description": "Uttar Pradesh Teacher Eligibility Test"
+      },
+      {
+        "name": "UPSSSC Junior Assistant",
+        "description": "Uttar Pradesh Subordinate Services Selection Commission"
+      },
+      {
+        "name": "UP Police Constable",
+        "description": "Uttar Pradesh Police Constable"
+      }
     ]
   }
 }

@@ -1,5 +1,5 @@
 // Image Resizer Tool Logic
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const uploadArea = document.getElementById('upload-area');
     const imageInput = document.getElementById('image-input');
     const uploadBtn = document.getElementById('upload-btn');
@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
     autoResizeBtn.addEventListener('click', () => {
         if (originalImage.src) {
             const img = new Image();
-            img.onload = function() {
+            img.onload = function () {
                 widthInput.value = this.naturalWidth;
                 heightInput.value = this.naturalHeight;
             };
@@ -108,9 +108,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
         originalFile = file;
         const reader = new FileReader();
-        reader.onload = function(e) {
+        reader.onload = function (e) {
             originalImage.src = e.target.result;
-            originalImage.onload = function() {
+            originalImage.onload = function () {
                 originalDimensions.textContent = `Dimensions: ${this.naturalWidth} x ${this.naturalHeight}`;
                 originalSize.textContent = `Size: ${formatFileSize(file.size)}`;
                 controlsPanel.style.display = 'block';
@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', function() {
         canvas.height = height;
 
         const img = new Image();
-        img.onload = function() {
+        img.onload = function () {
             // Calculate aspect ratio to fit within the specified dimensions
             const aspectRatio = this.naturalWidth / this.naturalHeight;
             let drawWidth = width;

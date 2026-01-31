@@ -1,7 +1,8 @@
 <!-- Header component: used across pages -->
 <header class="site-header">
   <div class="container header-inner">
-    <a class="logo" href="/"><img src="assets/images/logo.svg" alt="ExamFormTools" class="logo-img"><span class="logo-exam">Exam</span><span class="logo-tools">FormTools</span></a>
+    <a class="logo" href="/"><img src="assets/images/logo.svg" alt="ExamFormTools" class="logo-img"><span
+        class="logo-exam">Exam</span><span class="logo-tools">FormTools</span></a>
     <nav class="site-nav" id="site-nav">
       <button class="nav-cancel" id="nav-cancel" aria-label="Close navigation">&times;</button>
       <a href="#top" class="home-link">Home</a>
@@ -11,15 +12,16 @@
       <a href="#testimonials">Stories</a>
     </nav>
     <div class="nav-actions">
-      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation"><span class="line line1"></span><span class="line line2"></span></button>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation"><span class="line line1"></span><span
+          class="line line2"></span></button>
     </div>
   </div>
 </header>
 <script>
-const logoImg = document.querySelector('.logo-img');
-const logoSpans = document.querySelectorAll('.logo-exam, .logo-tools');
-logoSpans.forEach(span => span.style.display = 'none');
-logoImg.addEventListener('error', function() {
+  const logoImg = document.querySelector('.logo-img');
+  const logoSpans = document.querySelectorAll('.logo-exam, .logo-tools');
+  logoSpans.forEach(span => span.style.display = 'none');
+  logoImg.addEventListener('error', function () {
     logoSpans.forEach(span => span.style.display = 'inline');
-});
+  });
 </script>
