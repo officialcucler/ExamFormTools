@@ -648,7 +648,7 @@ html {
         gap: 1rem;
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
-        padding: 0 2rem;
+        padding: 10px 2rem;
         width: 100%;
         scroll-behavior: smooth;
         scroll-snap-type: x mandatory;
@@ -672,6 +672,7 @@ html {
         transform: rotate(0deg);
         scroll-snap-align: start;
         margin: 0 auto;
+        box-shadow: none;
     }
 
     .carousel-dots {
@@ -858,7 +859,7 @@ section h2::after {
         gap: 1rem;
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
-        padding: 0 2rem;
+        padding: 10px 2rem;
         width: 100%;
         scroll-behavior: smooth;
         scroll-snap-type: x mandatory;
