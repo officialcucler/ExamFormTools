@@ -317,8 +317,10 @@ html {
 }
 
 .feature-card:nth-child(1) {
-    background: linear-gradient(135deg, rgba(255, 107, 107, 0.008), rgba(238, 90, 36, 0.008));
+    background: transparent;
     color: rgb(0, 0, 0);
+    border: 1px solid rgba(255, 107, 107, 0.3);
+    box-shadow: 0 0 15px rgba(255, 107, 107, 0.4), inset 0 0 15px rgba(255, 107, 107, 0.1);
 }
 
 .feature-card:nth-child(1) h3 {
@@ -338,8 +340,10 @@ html {
 }
 
 .feature-card:nth-child(2) {
-    background: linear-gradient(135deg, rgba(219, 234, 254, 0.08), rgba(191, 219, 254, 0.08)); /* Blue gradient */
+    background: transparent;
     color: #1e40af;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.4), inset 0 0 15px rgba(59, 130, 246, 0.1);
 }
 
 .feature-card:nth-child(2) h3 {
@@ -355,8 +359,10 @@ html {
 }
 
 .feature-card:nth-child(3) {
-    background: linear-gradient(135deg, rgba(220, 252, 231, 0.08), rgba(187, 247, 208, 0.08)); /* Green gradient */
+    background: transparent;
     color: #166534;
+    border: 1px solid rgba(34, 197, 94, 0.3);
+    box-shadow: 0 0 15px rgba(34, 197, 94, 0.4), inset 0 0 15px rgba(34, 197, 94, 0.1);
 }
 
 .feature-card:nth-child(3) h3 {
@@ -372,8 +378,10 @@ html {
 }
 
 .feature-card:nth-child(4) {
-    background: linear-gradient(135deg, rgba(252, 231, 243, 0.08), rgba(251, 207, 232, 0.08)); /* Pink gradient */
+    background: transparent;
     color: #be185d;
+    border: 1px solid rgba(219, 39, 119, 0.3);
+    box-shadow: 0 0 15px rgba(219, 39, 119, 0.4), inset 0 0 15px rgba(219, 39, 119, 0.1);
 }
 
 .feature-card:nth-child(4) h3 {
@@ -444,7 +452,7 @@ html {
 
 .card-divider {
     border: none;
-    border-top: 1px solid white;
+    border-top: 1px solid #9ca3af;
     margin: 1rem 0;
 }
 
