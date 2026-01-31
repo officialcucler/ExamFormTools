@@ -59,15 +59,38 @@
 <body>
     <a class="skip-link" href="#main">Skip to content</a>
 
-    <div id="site-header"></div>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="../index.html"><img src="../assets/images/logo.svg" alt="ExamFormTools" class="logo-img"><span class="logo-exam">Exam</span><span class="logo-tools">FormTools</span></a>
+            <div class="nav-actions">
+                <a href="../index.html" class="home-icon" aria-label="Go to Home">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <polyline points="9,22 9,12 15,12 15,22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </header>
+    <script>
+    const logoImg = document.querySelector('.logo-img');
+    const logoSpans = document.querySelectorAll('.logo-exam, .logo-tools');
+    logoSpans.forEach(span => span.style.display = 'none');
+    logoImg.addEventListener('error', function() {
+        logoSpans.forEach(span => span.style.display = 'inline');
+    });
+    </script>
 
-    <main id="main" class="container">
+    <main id="main">
         <header class="exam-header">
+            <div class="container">
             <h1>UPSC Exams Photo & Signature Requirements</h1>
             <p class="exam-intro">Complete specifications for Union Public Service Commission examinations including IAS, IPS, IFS, and other civil services exams.</p>
+            </div>
         </header>
 
         <section class="requirements-section">
+            <div class="container">
             <h2>Photo Requirements</h2>
             <div class="requirements-grid">
                 <div class="requirement-card">
@@ -91,9 +114,11 @@
                     <p>Recommended: 200 DPI</p>
                 </div>
             </div>
+            </div>
         </section>
 
         <section class="requirements-section">
+            <div class="container">
             <h2>Signature Requirements</h2>
             <div class="requirements-grid">
                 <div class="requirement-card">
@@ -117,9 +142,11 @@
                     <p>Clear and legible signature</p>
                 </div>
             </div>
+            </div>
         </section>
 
         <section class="exam-list-section">
+            <div class="container">
             <h2>UPSC Services Covered</h2>
             <div class="exam-list">
                 <div class="exam-item">
@@ -147,17 +174,21 @@
                     <p>Civil Services Examination</p>
                 </div>
             </div>
+            </div>
         </section>
 
-        <section class="tools-section">
-            <h2>Free Tools for UPSC Exam Preparation</h2>
-            <p>Use our free online tools to resize your photos and signatures according to UPSC specifications:</p>
-            <div class="tools-grid">
-                <div class="tool-link">
-                    <a href="../tools/image-resizer.html" class="btn-primary">Photo Resizer</a>
+        <section class="cta-section">
+            <div class="container">
+                <h2>Need More Tools?</h2>
+                <p><span style="color: black; font-weight: bold;">Complete your exam documents with our full suite of processing tools — all</span> <span class="highlight">100% free!</span></p>
+                <div class="cta-buttons">
+                    <a href="../#tools" class="btn-primary large">Explore All Tools</a>
+                    <a href="../#categories" class="btn-secondary large">Check Requirements</a>
                 </div>
-                <div class="tool-link">
-                    <a href="../tools/signature-resizer.html" class="btn-primary">Signature Resizer</a>
+                <div class="cta-features">
+                    <span><strong>No Registration Required</strong></span>
+                    <span><strong>100% Free Forever</strong></span>
+                    <span><strong>Instant Processing</strong></span>
                 </div>
             </div>
         </section>
