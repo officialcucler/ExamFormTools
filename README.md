@@ -119,6 +119,18 @@ Reduce PDF file size while maintaining readability and quality. Supports multipl
 ### Document Convert
 Convert images to PDF format for document submissions.
 
+## New Features
+
+### Dynamic Exam Requirements
+- **Structured JSON Data**: Exam specifications are stored in `exam-requirements.json` for easy maintenance and updates
+- **Dynamic Loading**: JavaScript modules (`category-requirements-loader.js`, `exam-requirements-loader.js`) dynamically load exam requirements
+- **Real-time Updates**: Requirements can be updated without code changes, ensuring accuracy for latest exam specifications
+
+### Enhanced User Experience
+- **Category-specific Logos**: Visual exam category logos in SVG format for better recognition
+- **Comprehensive Favicon Set**: Multi-resolution favicons for optimal display across devices and platforms
+- **Responsive Design**: Optimized for mobile devices with touch-friendly interfaces
+
 ## Project Structure
 
 ```
@@ -140,9 +152,29 @@ examformtools/
 │   │   ├── image-resizer.js  # Photo resize functionality
 │   │   ├── signature.js      # Signature resize functionality
 │   │   ├── pdf-compressor.js # PDF compression
-│   │   └── image-to-pdf.js   # Document conversion
-│   └── images/
-│       └── logo.svg          # Site logo
+│   │   ├── image-to-pdf.js   # Document conversion
+│   │   ├── category-requirements-loader.js # Dynamic category loading
+│   │   ├── exam-requirements-loader.js     # Exam requirements loader
+│   │   └── exam-requirements.json          # Structured exam specifications
+│   ├── images/
+│   │   ├── logo.svg          # Site logo
+│   │   ├── exam-logos/       # Exam category logos
+│   │   │   ├── banking.svg
+│   │   │   ├── jee-neet.svg
+│   │   │   ├── railway.svg
+│   │   │   ├── ssc.svg
+│   │   │   ├── state.svg
+│   │   │   └── upsc.svg
+│   │   └── favicons/         # Favicon files
+│   │       ├── apple-touch-icon.png
+│   │       ├── favicon-16x16.png
+│   │       ├── favicon-32x32.png
+│   │       ├── favicon-64x64.png
+│   │       ├── favicon-128x128.png
+│   │       ├── favicon-256x256.png
+│   │       ├── favicon.html
+│   │       ├── favicon.ico
+│   │       └── mstile-144x144.png
 ├── components/
 │   ├── header.html           # Site header
 │   ├── footer.html           # Site footer
@@ -155,10 +187,11 @@ examformtools/
 │   ├── pdf-compressor.html   # PDF compression tool
 │   └── image-to-pdf.html     # Document conversion tool
 ├── exams/
+│   ├── banking.html          # Banking exam requirements
+│   ├── jee-neet.html         # JEE & NEET exam requirements
+│   ├── railway.html          # Railway exam requirements
 │   ├── ssc.html              # SSC exam requirements
 │   ├── upsc.html             # UPSC exam requirements
-│   ├── banking.html          # Banking exam requirements
-│   ├── railway.html          # Railway exam requirements
 │   └── up-state-exams.html   # State exam requirements
 └── pages/
     ├── contact.html          # Contact information
@@ -225,7 +258,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 For questions, suggestions, or support:
 - Website: https://examformtools.in
-- Email: support@examformtools.in
+- Email: examformtools.in@gmail.com
 
 ---
 
