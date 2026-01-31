@@ -1039,9 +1039,6 @@ section h2::after {
         opacity: 1 !important;
         transform: translateY(0) !important;
     }
-    .category-card {
-        transform: none;
-    }
 }
 
 /* Mobile-only elements */
