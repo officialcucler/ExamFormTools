@@ -46,7 +46,7 @@
 
     <header class="site-header">
         <div class="container header-inner">
-            <a class="logo" href="../index.html"><span class="logo-exam">Exam</span><span class="logo-tools">FormTools</span></a>
+            <a class="logo" href="../index.html"><img src="../assets/images/logo.svg" alt="ExamFormTools" class="logo-img"><span class="logo-exam">Exam</span><span class="logo-tools">FormTools</span></a>
             <div class="nav-actions">
                 <a href="../index.html" class="home-icon" aria-label="Go to Home">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -57,6 +57,14 @@
             </div>
         </div>
     </header>
+    <script>
+    const logoImg = document.querySelector('.logo-img');
+    const logoSpans = document.querySelectorAll('.logo-exam, .logo-tools');
+    logoSpans.forEach(span => span.style.display = 'none');
+    logoImg.addEventListener('error', function() {
+        logoSpans.forEach(span => span.style.display = 'inline');
+    });
+    </script>
 
     <main id="main">
         <section class="page-hero">
